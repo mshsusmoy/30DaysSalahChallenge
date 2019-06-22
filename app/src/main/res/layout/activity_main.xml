@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:weightSum="4"
+    tools:context=".View.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:contentDescription="@string/bismillah"
+            android:src="@drawable/bismillah" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:id="@+id/iv_quran"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/quran"
+                android:src="@drawable/ic_quran" />
+
+            <TextView
+                android:id="@+id/txt_quran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_quran"
+                android:layout_centerHorizontal="true"
+                android:text="@string/quran"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_hadith"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/hadith"
+                android:src="@drawable/ic_hadith" />
+
+            <TextView
+                android:id="@+id/txt_hadith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_hadith"
+                android:layout_centerHorizontal="true"
+                android:text="@string/hadith"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:id="@+id/iv_salat"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/salah"
+                android:src="@drawable/ic_salat" />
+
+            <TextView
+                android:id="@+id/txt_salat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_salat"
+                android:text="@string/salah_challenge"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_alarm"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/reminder"
+                android:src="@drawable/ic_alarm" />
+
+            <TextView
+                android:id="@+id/txt_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_alarm"
+                android:layout_centerHorizontal="true"
+                android:text="@string/salah_reminder"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:id="@+id/iv_deliverance"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/speech"
+                android:src="@drawable/ic_speech" />
+
+            <TextView
+                android:id="@+id/txt_deliverance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_deliverance"
+                android:layout_centerHorizontal="true"
+                android:text="@string/deliverance"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_reset"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/reminder"
+                android:src="@drawable/ic_reset" />
+
+            <TextView
+                android:id="@+id/txt_reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_reset"
+                android:layout_centerHorizontal="true"
+                android:text="@string/reset"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

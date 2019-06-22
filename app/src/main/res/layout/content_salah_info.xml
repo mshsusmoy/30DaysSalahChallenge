@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorCarbon"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".View.SalahInformationActivity"
+    tools:showIn="@layout/activity_salah_info">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/how_many_times_and_rakahs_have_you_completed_your_salah_today"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_fajr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_heading"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/fajr"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_drop_down"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_fajr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_fajr"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:ael_duration="500"
+            app:ael_expanded="true"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_farz_fajr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/farz_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="2"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_sunnah_fajr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_farz_fajr"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/sunnah_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="2"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/btn_save_fajr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_sunnah_fajr"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button_redwine"
+                android:elevation="8dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_zuhr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/expandableLayout_fajr"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/zuhr"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_drop_down"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_zuhr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_zuhr"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_farz_zuhr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/farz_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="24"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_sunnah_zuhr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_farz_zuhr"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/sunnah_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="246"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_nafl_zuhr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_sunnah_zuhr"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/nafl_in_rakah"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:digits="24"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/btn_save_zuhr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_nafl_zuhr"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button_redwine"
+                android:elevation="8dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_asr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/expandableLayout_zuhr"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/asr"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_drop_down"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_asr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_asr"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_farz_asr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/farz_in_rakah"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:digits="24"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_sunnah_asr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_farz_asr"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/sunnah_in_rakah"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:digits="24"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/btn_save_asr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_sunnah_asr"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button_redwine"
+                android:elevation="8dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_maghrib"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/expandableLayout_asr"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/maghrib"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_drop_down"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_maghrib"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_maghrib"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_farz_maghrib"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/farz_in_rakah"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:digits="23"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_sunnah_maghrib"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_farz_maghrib"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/sunnah_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="2"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_nafl_maghrib"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_sunnah_maghrib"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/nafl_in_rakah"
+                android:digits="24"
+                android:inputType="numberDecimal"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/btn_save_maghrib"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_nafl_maghrib"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button_redwine"
+                android:elevation="8dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_isha"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/expandableLayout_maghrib"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/isha"
+                android:textColor="@color/colorWhite"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/arrow_drop_down"
+                android:src="@drawable/ic_arrow_drop_down" />
+
+        </RelativeLayout>
+
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/expandableLayout_isha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_isha"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            app:ael_duration="500"
+            app:ael_expanded="false"
+            app:ael_interpolator="accelerate"
+            app:ael_orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_farz_isha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/farz_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="24"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_sunnah_isha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_farz_isha"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/sunnah_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="246"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <EditText
+                android:id="@+id/et_nafl_isha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_sunnah_isha"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:background="@drawable/bg_edittext_white_cornered"
+                android:hint="@string/nafl_in_rakah"
+                android:inputType="numberDecimal"
+                android:digits="24"
+                android:maxLength="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorCarbon"
+                tools:targetApi="o" />
+
+            <Button
+                android:id="@+id/btn_save_isha"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/et_nafl_isha"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_button_redwine"
+                android:elevation="8dp"
+                android:text="@string/save"
+                android:textColor="@color/colorWhite"
+                tools:targetApi="lollipop" />
+
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

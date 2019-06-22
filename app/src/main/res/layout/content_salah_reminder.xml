@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".View.SalahReminderActivity"
+    tools:showIn="@layout/activity_salah_reminder">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp"
+        android:layout_below="@+id/toolbar"
+        tools:ignore="UnknownIdInLayout">
+
+        <TextView
+            android:id="@+id/txt_alarm_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alarm_on"
+            android:textColor="@color/colorCarbon"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switch_alarm_on_or_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/txt_alarm_status" />
+
+        <RelativeLayout
+            android:id="@+id/layout_fajr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/switch_alarm_on_or_off"
+            android:layout_marginTop="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fajr"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_alarm_fajr"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/fajr"
+                android:src="@drawable/alarm_clock" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time_fajr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_toStartOf="@+id/iv_alarm_fajr"
+                android:text="@string/_4_00_am"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_alarm_fajr"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorCarbon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_zuhr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_fajr"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zuhr"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_alarm_zuhr"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/zuhr"
+                android:src="@drawable/alarm_clock" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time_zuhr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_toStartOf="@+id/iv_alarm_zuhr"
+                android:text="@string/_1_00_pm"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_alarm_zuhr"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorCarbon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_asr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_zuhr"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/asr"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_alarm_asr"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/asr"
+                android:src="@drawable/alarm_clock" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time_asr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_toStartOf="@+id/iv_alarm_asr"
+                android:text="@string/_5_00_pm"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_alarm_asr"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorCarbon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_maghrib"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_asr"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/maghrib"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_alarm_maghrib"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/maghrib"
+                android:src="@drawable/alarm_clock" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time_maghrib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_toStartOf="@+id/iv_alarm_maghrib"
+                android:text="@string/_6_20_pm"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_alarm_maghrib"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorCarbon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_isha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_maghrib"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/isha"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/iv_alarm_isha"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/isha"
+                android:src="@drawable/alarm_clock" />
+
+            <TextView
+                android:id="@+id/txt_alarm_time_isha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_toStartOf="@+id/iv_alarm_isha"
+                android:text="@string/_6_20_pm"
+                android:textColor="@color/colorCarbon"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/iv_alarm_isha"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorCarbon" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
