@@ -24,6 +24,8 @@ public class DefaultNotificationReceiver extends BroadcastReceiver {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             importance = NotificationManager.IMPORTANCE_HIGH;
         }
+
+        
         Intent repeating_intent = new Intent(context, MainActivity.class);
         repeating_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent =  PendingIntent.getActivity(context,notificationId,repeating_intent,PendingIntent.FLAG_UPDATE_CURRENT);
