@@ -51,20 +51,25 @@ public class NotificationHelperMaghrib extends ContextWrapper {
         CharSequence charSequence = "Dismiss";
         Intent mIntent = new Intent(getApplicationContext(), AlarmStopper.class);
         mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, mIntent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 4, mIntent, 0);
 
         MediaController.getInstance(getApplicationContext()).playMusic();
 
+        //MediaController mediaController = new MediaController(getApplicationContext());
+        //mediaController.playMusic();
+
+
         Intent repeating_intent = new Intent(getApplicationContext(), MainActivity.class);
         repeating_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent_fajr =  PendingIntent.getActivity(getApplicationContext(),4,repeating_intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent_Maghrib = PendingIntent.getActivity(getApplicationContext(), 4, repeating_intent, PendingIntent.FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(getApplicationContext(), channelID)
+                .setContentIntent(pendingIntent_Maghrib)
                 .setContentTitle("Salah Reminder!")
                 .setContentText("It's time to pray Maghrib")
-                .setAutoCancel(true)
                 .setDefaults(RingtonePreference.DEFAULT_ORDER)
-                .addAction(R.drawable.alarm_clock,charSequence,pendingIntent)
-                .setVibrate(new long[] { 0, 200, 100, 200 })
+                .addAction(R.drawable.alarm_clock, charSequence, pendingIntent)
+                .setAutoCancel(true)
+                .setVibrate(new long[]{0, 200, 100, 200})
                 .setSmallIcon(R.drawable.ic_launcher_foreground);
     }
 }

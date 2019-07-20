@@ -220,6 +220,7 @@ public class SalahInformationActivity extends AppCompatActivity {
         nafl = "";
 
         if (farz.equals("")) {
+
             Toast.makeText(getApplicationContext(), "Please check your input!", Toast.LENGTH_SHORT).show();
         } else {
             databaseHelper.insertSalahInformation(day, salahName, farz, sunnah, nafl, salahCounter);

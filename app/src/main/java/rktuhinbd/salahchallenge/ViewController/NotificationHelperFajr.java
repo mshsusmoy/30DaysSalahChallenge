@@ -51,9 +51,12 @@ public class NotificationHelperFajr extends ContextWrapper {
         CharSequence charSequence = "Dismiss";
         Intent mIntent = new Intent(getApplicationContext(), AlarmStopper.class);
         mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, mIntent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 1, mIntent, 0);
 
         MediaController.getInstance(getApplicationContext()).playMusic();
+
+        //MediaController mediaController = new MediaController(getApplicationContext());
+        //mediaController.playMusic();
 
 
         Intent repeating_intent = new Intent(getApplicationContext(), MainActivity.class);

@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".View.deliverance"></activity>
         <activity
             android:name=".View.AlarmActivity"
             android:screenOrientation="portrait"
@@ -85,8 +86,6 @@
             android:enabled="true"
             android:exported="true"
             tools:ignore="ExportedReceiver,InnerclassSeparator" />
-
     </application>
 
 </manifest>
-

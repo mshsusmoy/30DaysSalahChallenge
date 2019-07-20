@@ -42,14 +42,28 @@ public class NotificationHelperDefault extends ContextWrapper {
     }
 
     public NotificationCompat.Builder getChannelNotification() {
+        CharSequence charSequence = "Dismiss";
+        Intent mIntent = new Intent(getApplicationContext(), AlarmStopper.class);
+        mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, mIntent, 0);
+
+        MediaController.getInstance(getApplicationContext()).playMusic();
+
+        //MediaController mediaController = new MediaController(getApplicationContext());
+        //mediaController.playMusic();
+
+
         Intent repeating_intent = new Intent(getApplicationContext(), MainActivity.class);
         repeating_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        PendingIntent pendingIntent_default =  PendingIntent.getActivity(getApplicationContext(),9,repeating_intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent_isha = PendingIntent.getActivity(getApplicationContext(), 0, repeating_intent, PendingIntent.FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(getApplicationContext(), channelID)
+                .setContentIntent(pendingIntent_isha)
                 .setContentTitle("Assalamu Alaikum")
                 .setContentText("Read verse from Quran or read any Hadith")
-                .setAutoCancel(true)
                 .setDefaults(RingtonePreference.DEFAULT_ORDER)
+                .addAction(R.drawable.alarm_clock, charSequence, pendingIntent)
+                .setAutoCancel(true)
+                .setVibrate(new long[]{0, 200, 100, 200})
                 .setSmallIcon(R.drawable.ic_launcher_foreground);
     }
 }

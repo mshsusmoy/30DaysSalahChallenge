@@ -1,5 +1,6 @@
 package rktuhinbd.salahchallenge.View;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -374,6 +375,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("ResourceAsColor")
     private void getSalahInformation() {
 
         for (day = 1; day < 31; day++) {
@@ -389,6 +391,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay1.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay1.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 2) {
@@ -397,6 +400,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay2.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay2.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 3) {
@@ -405,6 +409,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay3.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay3.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 4) {
@@ -413,6 +418,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay4.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay4.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 5) {
@@ -421,6 +427,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay5.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay5.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 6) {
@@ -429,6 +436,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay6.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay6.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 7) {
@@ -437,6 +445,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay7.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay7.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 8) {
@@ -445,6 +454,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay8.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay8.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 9) {
@@ -453,6 +463,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay9.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay9.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 10) {
@@ -461,6 +472,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay10.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay10.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 11) {
@@ -469,6 +481,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay11.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay11.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 12) {
@@ -477,6 +490,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay12.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay12.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 13) {
@@ -485,6 +499,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay13.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay13.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 14) {
@@ -493,6 +508,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay14.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay14.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 15) {
@@ -501,6 +517,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay15.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay15.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 16) {
@@ -509,6 +526,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay16.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay16.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 17) {
@@ -517,6 +535,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay17.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay17.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 18) {
@@ -525,6 +544,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay18.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay18.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 19) {
@@ -533,6 +553,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay19.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay19.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 20) {
@@ -541,6 +562,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay20.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay20.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 21) {
@@ -549,6 +571,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay21.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay21.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 22) {
@@ -557,6 +580,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay22.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay22.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 23) {
@@ -565,6 +589,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay23.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay23.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 24) {
@@ -573,6 +598,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay24.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay24.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 25) {
@@ -581,6 +607,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay25.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay25.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 26) {
@@ -589,6 +616,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay26.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay26.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 27) {
@@ -597,6 +625,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay27.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay27.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 28) {
@@ -605,6 +634,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay28.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay28.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 29) {
@@ -613,6 +643,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay29.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay29.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 } else if (day == 30) {
@@ -621,6 +652,7 @@ public class SalahChallengeActivity extends AppCompatActivity {
                     }
                     if (counter == 5) {
                         btDay30.setBackgroundResource(R.drawable.circular_button_green);
+                        btDay30.setTextColor(R.color.colorWhite);
                         counter = 0;
                     }
                 }

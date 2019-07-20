@@ -15,6 +15,7 @@ import java.util.Calendar;
 import rktuhinbd.salahchallenge.Data.DatabaseHelper;
 import rktuhinbd.salahchallenge.R;
 import rktuhinbd.salahchallenge.ViewController.AlertReceiverDefault;
+import rktuhinbd.salahchallenge.ViewController.MediaController;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MediaController.getInstance(getApplicationContext()).stopMusic();
 
         ivQuran = findViewById(R.id.iv_quran);
         ivHadith = findViewById(R.id.iv_hadith);
@@ -68,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         ivDeliverance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), QuranActivity.class));
+                startActivity(new Intent(getApplicationContext(), deliverance.class));
             }
         });
 

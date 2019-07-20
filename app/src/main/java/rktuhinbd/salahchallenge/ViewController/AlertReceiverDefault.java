@@ -10,6 +10,6 @@ public class AlertReceiverDefault extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         NotificationHelperDefault notificationHelper = new NotificationHelperDefault(context);
         NotificationCompat.Builder nb = notificationHelper.getChannelNotification();
-        notificationHelper.getManager().notify(9, nb.build());
+        notificationHelper.getManager().notify(0, nb.build());
     }
 }

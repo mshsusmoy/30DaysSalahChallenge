@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.aakira:expandable-layout:1.6.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/428fdc24c73cebc97b5f83a5c0218d29/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fd07f09138cbea27c14f3d4068d94b7/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/428fdc24c73cebc97b5f83a5c0218d29/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/428fdc24c73cebc97b5f83a5c0218d29/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fd07f09138cbea27c14f3d4068d94b7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6fd07f09138cbea27c14f3d4068d94b7/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
